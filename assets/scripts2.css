@@ -1,0 +1,26 @@
+/*   */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:rgb(219, 207, 192);
+    padding: 1px;
+    width: 33%;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#input {
+    text-align: center;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-top: 5px;
+    
+} 

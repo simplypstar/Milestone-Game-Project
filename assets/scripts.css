@@ -1,1 +1,30 @@
-<div id="map"></div>
+/*   */
+
+#main-grid, #main-grid2, #main-grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 65%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            box-sizing: border-box; 
+    border: 1px 1px 1px solid;
+    background-color:rgb(196, 196, 195);   
+}
+
+
+.col1, .col2, .col3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-sizing: content-box;
+    border: 2px solid rgba(1, 2, 1);
+    box-sizing: border-box;
+    width: 100%;
+    border: solid 1px;
+}
+
+ 
+#input {
+    text-align: center;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-top:5px;
+    
+}
