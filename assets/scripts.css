@@ -1,6 +1,6 @@
 /*   */
 
-#main-grid, #main-grid2, #main-grid3 {
+#top-grid-1, #main-grid2, #main-grid3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 65%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            box-sizing: border-box; 
@@ -9,7 +9,7 @@
 }
 
 
-.col1, .col2, .col3 {
+.col, .col1, .col2, .col3 {
     display: grid;
     grid-template-columns: auto auto auto;
     box-sizing: content-box;
@@ -20,11 +20,11 @@
 }
 
  
-#input {
+input {
     text-align: center;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    margin-top:5px;
+    margin-top: 5px;
     
 }
