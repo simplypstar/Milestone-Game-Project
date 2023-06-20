@@ -4,7 +4,7 @@
  #top-row, #middle-row, #bottom-row {
     display: grid;
     /*grid-template-columns: repeat(3, auto);*/
-    grid-template-columns: repeat(3, 10fr);
+    grid-template-columns: repeat(3, .5fr);
     width: 50%;
     border: 1px 1px 1px solid;
     /*background-color:rgb(124, 124, 121);*/
@@ -35,42 +35,58 @@ input {
     margin: 0;
 }
 
-/* Changes the background of a selected input field to yellow*/
+/* Changes the background of a selected input field to yellow
 input:focus {
-    background-color: rgb(231, 231, 99);
-  }
+    background-color: rgb(248, 248, 73);
+  }*/
 
 
-.top-left-grid
     /* Remove scroll arrows from input fields*/
     /* Chrome, Safari, Edge, Opera */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+} 
+
+#top-left-grid input, div {
+    background-color:rgb(179, 179, 244); 
 }
 
-#top-left-grid div,input {
-    background-color:rgb(165, 165, 163);  
-}
-
-
-#top-center-grid div,input {
+#top-center-grid div, input {
     background-color:rgb(217, 217, 216);  
 }
 
+#top-right-grid input, div {
+    background-color:rgb(179, 179, 244);
+}
 
+#middle-left-grid div {
+    background-color:rgb(217, 217, 216);
+}
 
+#middle-center-grid input,div {
+    background-color:rgb(179, 179, 244); 
+}
 
-#middle-left-grid div,input {
+#middle-right-grid div {
     background-color:rgb(217, 217, 216);  
 }
 
-#middle-right-grid div,input {
+#bottom-left-grid input, div {
+    background-color:rgb(179, 179, 244);    
+}
+
+#bottom-center-grid div {
     background-color:rgb(217, 217, 216);  
 }
 
-#bottom-center-grid div,input {
-    background-color:rgb(217, 217, 216);  
+#bottom-right-grid input, div {
+    background-color:rgb(179, 179, 244);   
+}
+
+/* Changes the background of a selected input field to yellow*/
+input:focus {
+    background-color: rgb(243, 243, 54);
 }
 
 p {
@@ -93,5 +109,10 @@ button {
     cursor: pointer;
     border-radius: 12px;
     text-decoration: none;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 0fr);
 }
+
+
+/* div + button {
+    background-color: white;   
+} */
