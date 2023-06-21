@@ -1,11 +1,17 @@
 /*   */
 
+.pageContent {
+    align-items: center;
+    max-width: 850px;
+    margin: 100px 200px;
+    background-color:rgb(195, 170, 189); 
+}
 
  #top-row, #middle-row, #bottom-row {
     display: grid;
     /*grid-template-columns: repeat(3, auto);*/
     grid-template-columns: repeat(3, .5fr);
-    width: 50%;
+    width: 100%;
     border: 1px 1px 1px solid;
     /*background-color:rgb(124, 124, 121);*/
  } 
@@ -84,16 +90,14 @@ input:focus {
     background-color:rgb(179, 179, 244);   
 }
 
-/* Changes the background of a selected input field to yellow*/
-input:focus {
-    background-color: rgb(243, 243, 54);
-}
+
 
 p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1px;
     margin-bottom: 30px;
+    font-weight: bold;
 
 } 
 
@@ -110,6 +114,13 @@ button {
     border-radius: 12px;
     text-decoration: none;
     grid-template-columns: repeat(6, 0fr);
+    position: relative;
+    
+}
+
+/* Changes the background of a selected input field to yellow*/
+input:focus {
+    background-color: rgb(243, 243, 54);
 }
 
 

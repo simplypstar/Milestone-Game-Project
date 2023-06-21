@@ -11,16 +11,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Milestone 1 Game Project--1</h1>
-    <h2>Play Sudoku</h2>
+<div class="pageContent">   
+    <h1>Sudoku The Easy Way</h1>
+    <h2>Click here to learn how to play Sudoku</h2>
     <h1>Have fun!</h1>
     <div id="top-row">
         <div id="top-left-grid" class="col">
             <div class="position-1">
-                <input type="number" min="1" max="9" value="1">
+                <input type="number" id="top-left-position1" min="1" max="9" value="1"
+                onclick="this.value = ' '"/>
             </div>
             <div class="position-2">
-                <input type="number" min="1" max="9" value="2">
+                <input type="number" id="top-left-position2" min="1" max="9" value="2">
             </div>
             <div class="position-3">
                 <input type="number" min="1" max="9" value="3">
@@ -100,7 +102,7 @@
             <div class="position-8">
                 <input type="number" min="1" max="9" value="3">
             </div>
-            <div class="position-9">
+            <div clastype="number" mins="position-9">
                 <input type="number" min="1" max="9" value="3">
             </div>
         </div>
@@ -120,65 +122,65 @@
         </div>
            
         <div id="middle-center-grid" class="col"> 
-            <div class="item5"><input type=text id=input size="4" value="1"></div>
-            <div class="item5"><input type=text id=input size="4" value="2"></div>
-            <div class="item5"><input type=text id=input size="4" value="3"></div>
-            <div class="item5"><input type=text id=input size="4" value="4"></div>
-            <div class="item5"><input type=text id=input size="4" value="5"></div>
-            <div class="item5"><input type=text id=input size="4" value="6"></div>
-            <div class="item5"><input type=text id=input size="4" value="7"></div>
-            <div class="item5"><input type=text id=input size="4" value="8"></div>
-            <div class="item5"><input type=text id=input size="4" value="9"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="1"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="2"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="3"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="4"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="5"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="6"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="7"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="8"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="9"></div>
         </div> 
 
         <div id="middle-right-grid" class="col"> 
-            <div class="item6"><input type=text id=input size="4" value="1"></div>
-            <div class="item6"><input type=text id=input size="4" value="2"></div>
-            <div class="item6"><input type=text id=input size="4" value="3"></div>
-            <div class="item6"><input type=text id=input size="4" value="4"></div>
-            <div class="item6"><input type=text id=input size="4" value="5"></div>
-            <div class="item6"><input type=text id=input size="4" value="6"></div>
-            <div class="item6"><input type=text id=input size="4" value="7"></div>
-            <div class="item6"><input type=text id=input size="4" value="8"></div>
-            <div class="item6"><input type=text id=input size="4" value="9"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="1"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="2"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="3"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="4"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="5"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="6"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="7"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="8"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="9"></div>
         </div>
     </div>
 
     <div id="bottom-row">
         <div id="bottom-left-grid" class="col"> 
-            <div class="item4"><input type=text id=input size="4" value="1"></div>
-            <div class="item4"><input type=text id=input size="4" value="2"></div>
-            <div class="item4"><input type=text id=input size="4" value="3"></div>
-            <div class="item4"><input type=text id=input size="4" value="4"></div>
-            <div class="item4"><input type=text id=input size="4" value="5"></div>
-            <div class="item4"><input type=text id=input size="4" value="6"></div>
-            <div class="item4"><input type=text id=input size="4" value="7"></div>
-            <div class="item4"><input type=text id=input size="4" value="8"></div>
-            <div class="item4"><input type=text id=input size="4" value="9"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="1"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="2"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="3"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="4"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="5"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="6"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="7"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="8"></div>
+            <div class="item4"><input type="number" min="1" max="9" value="9"></div>
         </div>
            
         <div id="bottom-center-grid" class="col"> 
-            <div class="item5"><input type=text id=input size="4" value="1"></div>
-            <div class="item5"><input type=text id=input size="4" value="2"></div>
-            <div class="item5"><input type=text id=input size="4" value="3"></div>
-            <div class="item5"><input type=text id=input size="4" value="4"></div>
-            <div class="item5"><input type=text id=input size="4" value="5"></div>
-            <div class="item5"><input type=text id=input size="4" value="6"></div>
-            <div class="item5"><input type=text id=input size="4" value="7"></div>
-            <div class="item5"><input type=text id=input size="4" value="8"></div>
-            <div class="item5"><input type=text id=input size="4" value="9"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="1"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="2"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="3"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="4"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="5"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="6"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="7"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="8"></div>
+            <div class="item5"><input type="number" min="1" max="9" value="9"></div>
         </div> 
 
         <div id="bottom-right-grid" class="col"> 
-            <div class="item6"><input type=text id=input size="4" value="1"></div>
-            <div class="item6"><input type=text id=input size="4" value="2"></div>
-            <div class="item6"><input type=text id=input size="4" value="3"></div>
-            <div class="item6"><input type=text id=input size="4" value="4"></div>
-            <div class="item6"><input type=text id=input size="4" value="5"></div>
-            <div class="item6"><input type=text id=input size="4" value="6"></div>
-            <div class="item6"><input type=text id=input size="4" value="7"></div>
-            <div class="item6"><input type=text id=input size="4" value="8"></div>
-            <div class="item6"><input type=text id=input size="4" value="9"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="1"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="2"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="3"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="4"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="5"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="6"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="7"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="8"></div>
+            <div class="item6"><input type="number" min="1" max="9" value="9"></div>
         </div>
     </div>
 
@@ -190,8 +192,8 @@
 
 
 <!-- <div class="button"> -->
-    <button id="button1">1</button>
-    <button id="button2">2</button>
+    <button id="button1" value="1" onclick="button1_Function()">1</button>
+    <button id="button2" value="2" onclick="button2_Function()">2</button>
     <button id="button3">3</button>
     <button id="button4">4</button>
     <button id="button5">5</button>
@@ -211,6 +213,21 @@
 <p id="demo7"></p>
 <p id="demo8"></p>
 <p id="demo9"></p>
+
+
+<p></p>
+<p></p>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p id="demoNumb"></p> 
+<p>This is the end of the page</p>
+<p>This is the enf of the page</p>
+<p></p>
+<p></p>
+
 
 
 </body>

@@ -22,37 +22,42 @@
 
 
 // Add event listers to the 9 buttons
-const element1 = document.getElementById("button1");
-element1.addEventListener("click", button1_Function);
+// const element1 = document.getElementById("button1");
+// element1.addEventListener("click", button1_Function());
 
-const element2 = document.getElementById("button2");
-element2.addEventListener("click", button2_Function);
+// const element2 = document.getElementById("button2");
+// element2.addEventListener("click", button2_Function);
 
-const element3 = document.getElementById("button3");
-element3.addEventListener("click", button3_Function);
+// const element3 = document.getElementById("button3");
+// element3.addEventListener("click", button3_Function);
 
-const element4 = document.getElementById("button4");
-element4.addEventListener("click", button4_Function);
+// const element4 = document.getElementById("button4");
+// element4.addEventListener("click", button4_Function);
 
-const element5 = document.getElementById("button5");
-element5.addEventListener("click", button5_Function);
+// const element5 = document.getElementById("button5");
+// element5.addEventListener("click", button5_Function);
 
-const element6 = document.getElementById("button6");
-element6.addEventListener("click", button6_Function);
+// const element6 = document.getElementById("button6");
+// element6.addEventListener("click", button6_Function);
 
-const element7 = document.getElementById("button7");
-element7.addEventListener("click", button7_Function);
+// const element7 = document.getElementById("button7");
+// element7.addEventListener("click", button7_Function);
 
-const element8 = document.getElementById("button8");
-element8.addEventListener("click", button8_Function);
+// const element8 = document.getElementById("button8");
+// element8.addEventListener("click", button8_Function);
 
-const element9 = document.getElementById("button9");
-element9.addEventListener("click", button9_Function);
+// const element9 = document.getElementById("button9");
+// element9.addEventListener("click", button9_Function);
 
 
 // Define the functions that respond when a button is clicked
 function button1_Function() {
-    document.getElementById("demo1").innerHTML = "Hello World 1";
+    //document.getElementById("demo1").innerHTML = "Hello World 1";
+    // let setNumb = document.getElementByIdl('button1').value;
+    // document.getElementById('top-left-position1').value=setNumb;
+
+    document.getElementById("top-left-position1").value = document.getElementById("button1").value;
+    //alert("Button1 was clicked.");
 }
 
 function button2_Function() {
@@ -87,6 +92,20 @@ function button9_Function() {
     document.getElementById("demo9").innerHTML = "Hello World 9";
 }
 
-$("p").click(function(){
-    alert("The paragraph was clicked.");
-  });
+// $("p").click(function(){
+//    alert("The paragraph was clicked.");
+//  });
+
+
+ $(document).ready(function() {
+ //$(this).click(function() {
+$("button").click(function() {
+
+    //here the value is stored in a variable
+    let numb = $(input:text).val();
+    document.getElementById,("demoNumb").innerHTML = numb;
+    let activeElement = document.activeElement;
+    //console.log(activeElement.tagName, activeElement.type || 'N/A');
+    //alert(activeElement.tagName, activeElement.type || 'N/A');
+  });0
+});
