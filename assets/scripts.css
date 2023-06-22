@@ -4,20 +4,18 @@
     align-items: center;
     max-width: 850px;
     margin: 100px 200px;
-    background-color:rgb(195, 170, 189); 
+    /* background-color:rgb(195, 170, 189);  */
 }
 
  #top-row, #middle-row, #bottom-row {
     display: grid;
-    /*grid-template-columns: repeat(3, auto);*/
     grid-template-columns: repeat(3, .5fr);
     width: 100%;
     border: 1px 1px 1px solid;
-    /*background-color:rgb(124, 124, 121);*/
  } 
     
     
-    .col {
+ .col {
     display: grid;
     grid-template-columns: auto auto auto;
     box-sizing: content-box;
@@ -26,26 +24,23 @@
     width: 100%;
     border: solid 1px;
 }
- 
+      
 input {
     text-align: center;
-    border: none;
-    /*font-family: Arial, Helvetica, sans-serif;*/
+    border: 1px;
     font-family: "Lucida Console", Courier, monospace;
-    font-size: 38px;
+    font-size: 40px;
     font-weight: bold;
-    /*margin-top: 5px;*/
     height: 100px;
     width:  45%;
-    /*background-color: rgb(128, 128, 95);*/
     margin: 0;
+    background: transparent;
 }
 
-/* Changes the background of a selected input field to yellow
+/* Changes the background of a selected input field to yellow */
 input:focus {
     background-color: rgb(248, 248, 73);
-  }*/
-
+  }
 
     /* Remove scroll arrows from input fields*/
     /* Chrome, Safari, Edge, Opera */
@@ -54,54 +49,28 @@ input:focus {
     -webkit-appearance: none;
 } 
 
-#top-left-grid input, div {
+/* Set the bsckground color for the grids */
+#top-left-grid, #top-right-grid, #middle-center-grid, 
+#bottom-left-grid, #bottom-right-grid {
     background-color:rgb(179, 179, 244); 
 }
 
-#top-center-grid div, input {
+/* Set the bsckground color for the grids */
+#top-center-grid, #middle-left-grid, #middle-right-grid, #bottom-center-grid {
     background-color:rgb(217, 217, 216);  
 }
 
-#top-right-grid input, div {
-    background-color:rgb(179, 179, 244);
-}
-
-#middle-left-grid div {
-    background-color:rgb(217, 217, 216);
-}
-
-#middle-center-grid input,div {
-    background-color:rgb(179, 179, 244); 
-}
-
-#middle-right-grid div {
-    background-color:rgb(217, 217, 216);  
-}
-
-#bottom-left-grid input, div {
-    background-color:rgb(179, 179, 244);    
-}
-
-#bottom-center-grid div {
-    background-color:rgb(217, 217, 216);  
-}
-
-#bottom-right-grid input, div {
-    background-color:rgb(179, 179, 244);   
-}
-
-
-
+/* Set thee font formatting got the 'p' elements */
 p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 22px;
     line-height: 1px;
     margin-bottom: 30px;
     font-weight: bold;
-
 } 
 
 button {
+    +
     display: grid;
     background-color: rgb(117, 168, 219);
     border: none;
@@ -118,12 +87,4 @@ button {
     
 }
 
-/* Changes the background of a selected input field to yellow*/
-input:focus {
-    background-color: rgb(243, 243, 54);
-}
 
-
-/* div + button {
-    background-color: white;   
-} */

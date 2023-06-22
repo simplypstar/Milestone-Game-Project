@@ -10,139 +10,171 @@
     <!-- Script source from w3Schools (https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_click ) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
-<body>
+<body onclick="getActiveInputField()">
 <div class="pageContent">   
-    <h1>Sudoku The Easy Way</h1>
+    <h1>Play Sudoku The Easy Way</h1>
     <h2>Click here to learn how to play Sudoku</h2>
     <h1>Have fun!</h1>
     <div id="top-row">
         <div id="top-left-grid" class="col">
             <div class="position-1">
-                <input type="number" id="top-left-position1" min="1" max="9" value="1"
-                onclick="this.value = ' '"/>
+                <input type="number" id="top-left-position1" min="1" max="9" value="1">
             </div>
             <div class="position-2">
                 <input type="number" id="top-left-position2" min="1" max="9" value="2">
             </div>
             <div class="position-3">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-left-position3" min="1" max="9" value="3">
             </div>
             <div class="position-4">
-                <input type="number" min="1" max="9" value="4">
+                <input type="number" id="top-left-position4" min="1" max="9" value="4">
             </div>
             <div class="position-5">
-                <input type="number" min="1" max="9" value="5"> 
+                <input type="number" id="top-left-position5" min="1" max="9" value="5"> 
             </div>
             <div class="position-6">
-                <input type="number" min="1" max="9" value="6">
+                <input type="number" id="top-left-position6" min="1" max="9" value="6">
             </div>
             <div class="position-7">
-                <input type="number" min="1" max="9" value="7">
+                <input type="number" id="top-left-position7" min="1" max="9" value="7">
             </div>
             <div class="position-8">
-                <input type="number" min="1" max="9" value="8">
+                <input type="number" id="top-left-position8" min="1" max="9" value="8">
             </div>
             <div class="position-9">
-                <input type="number" min="1" max="9" value="9">
+                <input type="number" id="top-left-position9" min="1" max="9" value="9">
             </div>
         </div>
            
         <div id="top-center-grid" class="col">
             <div class="position-1">
-                <input type="number" min="1" max="9" value="1">
+                <input type="number" id="top-center-position1" min="1" max="9" value="1">
             </div>
             <div class="position-2">
-                <input type="number" min="1" max="9" value="2">
+                <input type="number" id="top-center-position2" min="1" max="9" value="2">
             </div>
             <div class="position-3">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-center-position3" min="1" max="9" value="3">
             </div>
             <div class="position-4">
-                <input type="number" min="1" max="9" value="4">
+                <input type="number"id="top-center-position4"  min="1" max="9" value="4">
             </div>
             <div class="position-5">
-                <input type="number" min="1" max="9" value="5">
+                <input type="number" id="top-center-position5" min="1" max="9" value="5">
             </div>
             <div class="position-6">
-                <input type="number" min="1" max="9" value="6">
+                <input type="number" id="top-center-position6" min="1" max="9" value="6">
             </div>
             <div class="position-7">
-                <input type="number" min="1" max="9" value="7">
+                <input type="number" id="top-center-position7" min="1" max="9" value="7">
             </div>
             <div class="position-8">
-                <input type="number" min="1" max="9" value="8">
+                <input type="number" id="top-center-position8" min="1" max="9" value="8">
             </div>
             <div class="position-9">
-                <input type="number" min="1" max="9" value="9">
+                <input type="number" id="top-center-position9" min="1" max="9" value="9">
             </div>
         </div>
 
         <div id="top-right-grid" class="col">
             <div class="position-1">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-right-position1" min="1" max="9" value="3">
             </div>
             <div class="position-2">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-right-position2" min="1" max="9" value="3">
             </div>
             <div class="position-3">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-right-position3" min="1" max="9" value="3">
             </div>
             <div class="position-4">
-                <input type="number" min="1" max="9" value="4">
+                <input type="number" id="top-right-position4" min="1" max="9" value="4">
             </div>
             <div class="position-5">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-right-position5" min="1" max="9" value="3">
             </div>
             <div class="position-6">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-right-position6" min="1" max="9" value="3">
             </div>
             <div class="position-7">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-right-position7" min="1" max="9" value="3">
             </div>
             <div class="position-8">
-                <input type="number" min="1" max="9" value="3">
+                <input type="number" id="top-right-position8" min="1" max="9" value="3">
             </div>
-            <div clastype="number" mins="position-9">
-                <input type="number" min="1" max="9" value="3">
+            <div class="position-9">
+                <input type="number" id="top-right-position9" min="1" max="9" value="3">
             </div>
         </div>
-    </div>
+    </div>   
   
    <div id="middle-row">
         <div id="middle-left-grid" class="col">
-            <div class="item4"><input type="number" min="1" max="9" value="1"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="2"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="3"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="4"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="5"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="6"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="7"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="8"></div>
-            <div class="item4"><input type="number" min="1" max="9" value="9"></div>
+            <div class="position1">
+                <input type="number" id="middle-left-position1" min="1" max="9" value="1">
+            </div>
+            <div class="position2">
+                <input type="number" id="middle-left-position2" min="1" max="9" value="1">
+            </div>
+            <div class="position3">
+                <input type="number" id="middle-left-position3" min="1" max="9" value="1">
+            </div>
+            <div class="position4">
+                <input type="number" id="middle-left-position4" min="1" max="9" value="1">
+            </div>
+            <div class="position5">
+                <input type="number" id="middle-left-position5" min="1" max="9" value="1">
+            </div>
+            <div class="position6">
+                <input type="number" id="middle-left-position6" min="1" max="9" value="1">
+            </div>
+            <div class="position7">
+                <input type="number" id="middle-left-position7" min="1" max="9" value="1">
+            </div>
+            <div class="position8">
+                <input type="number" id="middle-left-position8" min="1" max="9" value="1">
+            </div>
+            <div class="position9">
+                <input type="number" id="middle-left-position9" min="1" max="9" value="9">
+            </div>
+
         </div>
            
         <div id="middle-center-grid" class="col"> 
-            <div class="item5"><input type="number" min="1" max="9" value="1"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="2"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="3"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="4"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="5"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="6"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="7"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="8"></div>
-            <div class="item5"><input type="number" min="1" max="9" value="9"></div>
+            <div class="position1">
+                <input type="number" id="middle-center-position1" min="1" max="9" value="">
+             </div>
+            <div class="position2">
+                <input type="number" id="middle-center-position2" min="1" max="9" value="">
+             </div>
+            <div class="position3">
+                <input type="number" id="middle-center-position3" min="1" max="9" value="">
+             </div>
+            <div class="position4">
+                <input type="number" id="middle-center-position4" min="1" max="9" value="">
+             </div>
+            <div class="position5">
+                <input type="number" id="middle-center-position5" min="1" max="9" value="">
+             </div>
+            <div class="position6">
+                <input type="number" id="middle-center-position6" min="1" max="9" value="">
+             </div>
+            <div class="position7">
+                <input type="number" id="middle-center-position7" min="1" max="9" value="">
+             </div>
+            <div class="position8">
+                <input type="number" id="middle-center-position8" min="1" max="9" value="">
+             </div>
+            <div class="position9">
+                <input type="number" id="middle-center-position9" min="1" max="9" value="">
+             </div>
+
         </div> 
 
         <div id="middle-right-grid" class="col"> 
-            <div class="item6"><input type="number" min="1" max="9" value="1"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="2"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="3"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="4"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="5"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="6"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="7"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="8"></div>
-            <div class="item6"><input type="number" min="1" max="9" value="9"></div>
+            <div class="position1">
+                <input type="number" id="middle-center-position9" min="1" max="9" value="">
+            </div>
+
         </div>
     </div>
 
@@ -184,7 +216,7 @@
         </div>
     </div>
 
-<br><br><br>
+
 
 <p>Select an empty space on the Suduko board then select the button that</p>
 <p>corresponds with the number. This will enter the number into the vacant</p>
@@ -204,7 +236,7 @@
 <!--</div> -->
             
 
-<p id="demo1"></p>
+<p id="demo"></p>
 <p id="demo2"></p>
 <p id="demo3"></p>
 <p id="demo4"></p>
@@ -215,18 +247,9 @@
 <p id="demo9"></p>
 
 
-<p></p>
-<p></p>
+
 </div>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p id="demoNumb"></p> 
-<p>This is the end of the page</p>
-<p>This is the enf of the page</p>
-<p></p>
-<p></p>
+
 
 
 

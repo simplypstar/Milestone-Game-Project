@@ -1,2 +1,2 @@
 # Milestone-Game-Project
- Online Web-based Game
+ Online Web-based Sudoku Game
