@@ -1,10 +1,18 @@
 // Create JavaScript to control the Sudoku Board
 
 
+
+// get the value stored in the active input field
+function getActiveInputField() {
+    const inputField = document.activeElement.id;
+    document.getElementById("demo").innerHTML = element;
+}
+
+
 // Define the functions that respond when a button is clicked
 function button1_Function() {
-    document.getElementById("top-left-position1").value = document.getElementById("button1").value;
-    //alert("Button1 was clicked.");
+    document.getElementById(inputField).value = document.getElementById("button1").value;
+   //alert("Button1 was clicked.");
 }
 
 function button2_Function() {
@@ -42,6 +50,6 @@ function button9_Function() {
 
 // get the value stored in the active input field
 function getActiveInputField() {
-    const element = document.activeElement.id;
+    const inputField = document.activeElement.id;
     document.getElementById("demo").innerHTML = element;
   }
