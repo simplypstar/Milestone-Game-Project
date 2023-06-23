@@ -1,17 +1,34 @@
 /*   */
 
+h1 {
+    font-family: "Rokkitt", "Times New Roman", Times, serif;
+    font-size: 60px;
+    font-weight: bolder;font-style: italic;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Rokkitt", "Times New Roman", Times, serif;
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: center;
+}
+
 .pageContent {
     align-items: center;
-    max-width: 850px;
+    max-width: 90%;
     margin: 100px 200px;
     background-color:rgb(195, 170, 189);
+    min-width: 800px;
 }
 
  #top-row, #middle-row, #bottom-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid black;
-    width: 100%;
+    width: 85%;
+    align-items: center;
+    margin-left: 120px;
  } 
     
     
@@ -69,7 +86,7 @@ input:focus {
 /* Set thee font formatting got the 'p' elements */
 p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 22px;
+    font-size: 28px;
     line-height: 1px;
     margin-bottom: 30px;
     font-weight: bold;
@@ -77,19 +94,32 @@ p {
 
 button {
     display: grid;
-    background-color: rgb(117, 168, 219);
-    border: 4px solid black;
-    padding: 20px;
-    text-align: center;
     display: inline-block;
+    grid-template-columns: repeat(6, 1fr);   
+    background-color: rgb(117, 168, 219);
+    width: 10%;
+    border: 5px solid black;
+    text-align: center;
+    padding: 10px 15px;
     font-size: 60px;
-    margin: 6px 4px;
+    font-weight: bolder;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 35 px;
+    box-shadow: 0 9px #818080;
     text-decoration: none;
-    grid-template-columns: repeat(6, 1fr);
-    position: relative;
-    
+    position: relative;   
+}
+
+/* Added animation to the buttons */
+button:hover {
+    background-color: #3b6dec
+}
+
+/* Added color change when the mouse hovers over button */
+button:active {
+    background-color: #f86170;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
