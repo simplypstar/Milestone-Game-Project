@@ -8,11 +8,12 @@ var activeInput = "";
 // This global variable will be used with each of the buttlon functions
 function getActivePosition() {
     activeInput = document.activeElement.id;
+    //alert(activeInput);
 }
 
 
 // Define the functions that respond when a button is clicked. 
-// After selecting an input field, press button (1-9) that corresponds with the number (1-9) that will
+// After selecting an input field, press the button (1-9) that corresponds with the number (1-9) that will
 //   be entered into the ActiveElement (active input field)
 function button1_Function() {
     document.getElementById(activeInput).value = document.getElementById("button1").value;
@@ -82,13 +83,16 @@ function startGame() {
             break;
         case 1:  
             fillBoard(board_1_Array);
+            //alert("now make RO");
+            getInputFields();
             break;
         case 2:  
             fillBoard(board_2_Array);
             break;
         case 3:  
             fillBoard(board_3_Array);
-        case 3:  
+            break;
+        case 4:  
             fillBoard(board_4_Array);
             break;
         default:
@@ -97,9 +101,10 @@ function startGame() {
 }
 
 
+// This function fill the Suduko board with the numbers needed at the start of the game
 function fillBoard(arry) { 
 
-    document.getElementById("top_left_position1").value =  arry[1];
+    document.getElementById("top_left_position1").value = arry[1];
     document.getElementById("top_left_position2").value = arry[2];
     document.getElementById("top_left_position3").value = arry[3];
     document.getElementById("top_left_position4").value = arry[4];
@@ -180,6 +185,107 @@ function fillBoard(arry) {
     document.getElementById("bottom_right_position7").value = arry[79];
     document.getElementById("bottom_right_position8").value = arry[80];
     document.getElementById("bottom_right_position9").value = arry[81];
-
-
 }
+
+// This function will traverse a filled form and disable input fields that contain a number
+// This prevents players from changing these fields. They should only change blank fields.
+function getInputFields() {
+    markDisabled(document.getElementById("top_center_position1").value, "top_center_position1");
+    markDisabled(document.getElementById("top_center_position2").value , "top_center_position2");
+    markDisabled(document.getElementById("top_center_position3").value , "top_center_position3");
+    markDisabled(document.getElementById("top_center_position4").value , "top_center_position4");
+    markDisabled(document.getElementById("top_center_position5").value , "top_center_position5");
+    markDisabled(document.getElementById("top_center_position6").value , "top_center_position6");
+    markDisabled(document.getElementById("top_center_position7").value , "top_center_position7");
+    markDisabled(document.getElementById("top_center_position8").value , "top_center_position8");
+    markDisabled(document.getElementById("top_center_position9").value , "top_center_position9");
+    markDisabled(document.getElementById("top_right_position1").value , "top_right_position1");
+    markDisabled(document.getElementById("top_right_position2").value , "top_right_position2");
+    markDisabled(document.getElementById("top_right_position3").value , "top_right_position3");
+    markDisabled(document.getElementById("top_right_position4").value , "top_right_position4");
+    markDisabled(document.getElementById("top_right_position5").value , "top_right_position5");
+    markDisabled(document.getElementById("top_right_position6").value , "top_right_position6");
+    markDisabled(document.getElementById("top_right_position7").value , "top_right_position7");
+    markDisabled(document.getElementById("top_right_position8").value , "top_right_position8");
+    markDisabled(document.getElementById("top_right_position9").value , "top_right_position9");
+    markDisabled(document.getElementById("middle_left_position1").value , "middle_left_position1");
+    markDisabled(document.getElementById("middle_left_position2").value , "middle_left_position2");
+    markDisabled(document.getElementById("middle_left_position3").value , "middle_left_position3");
+    markDisabled(document.getElementById("middle_left_position4").value , "middle_left_position4");
+    markDisabled(document.getElementById("middle_left_position5").value , "middle_left_position5");
+    markDisabled(document.getElementById("middle_left_position6").value , "middle_left_position6");
+    markDisabled(document.getElementById("middle_left_position7").value , "middle_left_position7");
+    markDisabled(document.getElementById("middle_left_position8").value , "middle_left_position8");
+    markDisabled(document.getElementById("middle_left_position9").value , "middle_left_position9");
+    markDisabled(document.getElementById("middle_center_position1").value , "middle_center_position1");
+    markDisabled(document.getElementById("middle_center_position2").value , "middle_center_position2");
+    markDisabled(document.getElementById("middle_center_position3").value , "middle_center_position3");
+    markDisabled(document.getElementById("middle_center_position4").value , "middle_center_position4");
+    markDisabled(document.getElementById("middle_center_position5").value , "middle_center_position5");
+    markDisabled(document.getElementById("middle_center_position6").value , "middle_center_position6");
+    markDisabled(document.getElementById("middle_center_position7").value , "middle_center_position7");
+    markDisabled(document.getElementById("middle_center_position8").value , "middle_center_position8");
+    markDisabled(document.getElementById("middle_center_position9").value , "middle_center_position9");
+    markDisabled(document.getElementById("middle_right_position1").value , "middle_right_position1");
+    markDisabled(document.getElementById("middle_right_position2").value , "middle_right_position2");
+    markDisabled(document.getElementById("middle_right_position3").value , "middle_right_position3");
+    markDisabled(document.getElementById("middle_right_position4").value , "middle_right_position4");
+    markDisabled(document.getElementById("middle_right_position5").value , "middle_right_position5");
+    markDisabled(document.getElementById("middle_right_position6").value , "middle_right_position6");
+    markDisabled(document.getElementById("middle_right_position7").value , "middle_right_position7");
+    markDisabled(document.getElementById("middle_right_position8").value , "middle_right_position8");
+    markDisabled(document.getElementById("middle_right_position9").value , "middle_right_position9");
+    markDisabled(document.getElementById("bottom_left_position1").value , "bottom_left_position1");
+    markDisabled(document.getElementById("bottom_left_position2").value , "bottom_left_position2");
+    markDisabled(document.getElementById("bottom_left_position3").value , "bottom_left_position3");
+    markDisabled(document.getElementById("bottom_left_position4").value , "bottom_left_position4");
+    markDisabled(document.getElementById("bottom_left_position5").value , "bottom_left_position5");
+    markDisabled(document.getElementById("bottom_left_position6").value , "bottom_left_position6");
+    markDisabled(document.getElementById("bottom_left_position7").value , "bottom_left_position7");
+    markDisabled(document.getElementById("bottom_left_position8").value , "bottom_left_position8");
+    markDisabled(document.getElementById("bottom_left_position9").value , "bottom_left_position9");
+    markDisabled(document.getElementById("bottom_center_position1").value , "bottom_center_position1");
+    markDisabled(document.getElementById("bottom_center_position2").value , "bottom_center_position2");
+    markDisabled(document.getElementById("bottom_center_position3").value , "bottom_center_position3");
+    markDisabled(document.getElementById("bottom_center_position4").value , "bottom_center_position4");
+    markDisabled(document.getElementById("bottom_center_position5").value , "bottom_center_position5");
+    markDisabled(document.getElementById("bottom_center_position6").value , "bottom_center_position6");
+    markDisabled(document.getElementById("bottom_center_position7").value , "bottom_center_position7");
+    markDisabled(document.getElementById("bottom_center_position8").value , "bottom_center_position8");
+    markDisabled(document.getElementById("bottom_center_position9").value , "bottom_center_position9");
+    markDisabled(document.getElementById("bottom_right_position1").value , "bottom_right_position1");
+    markDisabled(document.getElementById("bottom_right_position2").value , "bottom_right_position2");
+    markDisabled(document.getElementById("bottom_right_position3").value , "bottom_right_position3");
+    markDisabled(document.getElementById("bottom_right_position4").value , "bottom_right_position4");
+    markDisabled(document.getElementById("bottom_right_position5").value , "bottom_right_position5");
+    markDisabled(document.getElementById("bottom_right_position6").value , "bottom_right_position6");
+    markDisabled(document.getElementById("bottom_right_position7").value , "bottom_right_position7");
+    markDisabled(document.getElementById("bottom_right_position8").value , "bottom_right_position8");
+    markDisabled(document.getElementById("bottom_right_position9").value , "bottom_right_position9");
+}
+
+// This function is called after a board is initially filled to disable input fields that contain a number 
+function markDisabled(inputFld, inputId) {
+
+    if(inputFld == "") {
+        // Move on to the next field
+    } else {        
+        document.getElementById(inputId).disabled = true;   
+    }
+}
+
+// function verifyNumbers() {
+
+//     switch (activeInput) {
+
+//         document.getElementById("top_left_position1").value === 6;
+//         document.getElementById("top_left_position2").value = arry[2];
+//         document.getElementById("top_left_position3").value = arry[3];
+//         document.getElementById("top_left_position4").value = arry[4];
+//         document.getElementById("top_left_position5").value = arry[5];
+//         document.getElementById("top_left_position6").value = arry[6];
+//         document.getElementById("top_left_position7").value = arry[7];
+//         document.getElementById("top_left_position8").value = arry[8];
+//         document.getElementById("top_left_position9").value = arry[9];
+//     }
+// }

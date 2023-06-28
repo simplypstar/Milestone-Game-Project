@@ -1,338 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone 1 Game Project--1</title>
-    <link rel="stylesheet" href="./assets/scripts.css"/>
-    <script src="./assets/index.js" defer></script>
-    <!-- Script source from w3Schools (https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_click ) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Milestone 1 Game Project--1</title>
+        <link rel="stylesheet" href="./assets/scripts.css"/>
+        <script src="./assets/index.js" defer></script>
+        <!-- Script source from w3Schools (https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_click ) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
 <body onclick="getActivePosition()">
-<div class="pageContent">
-    <br>
-    <h1>Play Sudoku The Easy Way</h1>
-    <h2>Click <a>here</a> to learn how to play Sudoku</h2>
-    <h1>Have fun!</h1>
-    <button class="startButton" onclick="startGame()">Start The Game</button>
-    <div class="gameSelect">
-        <form>
-            Select the Sudoku game to play:  
-                <select id="selectGame">
-                    <option>Games</option>
-                    <option>Sudoku Game 1</option>
-                    <option>Sudoku Game 2</option>
-                    <option>Sudoku Game 3</option>
-                    <option>Sudoku Game 4</option>
-                </select>
-                <!-- <input type="submit" value="Submit" onclick="startGame()"> -->
-        </form>
-    </div>
-    <div id="top-row">
-        <div id="top_left_grid" class="col">
-            <div class="position-1">
-                <input type="number" id="top_left_position1" value="">
-            </div>
-            <div class="position-2">
-                <input type="number" id="top_left_position2" value="">
-            </div>
-            <div class="position-3">
-                <input type="number" id="top_left_position3" value="">
-            </div>
-            <div class="position-4">
-                <input type="number" id="top_left_position4" value="">
-            </div>
-            <div class="position-5">
-                <input type="number" id="top_left_position5" value=""> 
-            </div>
-            <div class="position-6">
-                <input type="number" id="top_left_position6" value="">
-            </div>
-            <div class="position-7">
-                <input type="number" id="top_left_position7" value="">
-            </div>
-            <div class="position-8">
-                <input type="number" id="top_left_position8" value="">
-            </div>
-            <div class="position-9">
-                <input type="number" id="top_left_position9" value="">
-            </div>
+    <div class="pageContent">
+        <br>
+        <h1>Play Sudoku The Easy Way</h1>
+        <!-- <h2>Click <a>here</a> to learn how to play Sudoku</h2> -->
+        <h1>Have fun!</h1>
+        <button class="startButton" onclick="startGame()">Start The Game</button>
+        <div class="gameSelect">
+            <form>
+                Select the Sudoku game to play:  
+                    <select id="selectGame">
+                        <option>Games</option>
+                        <option>Sudoku Game 1</option>
+                        <option>Sudoku Game 2</option>
+                        <option>Sudoku Game 3</option>
+                        <option>Sudoku Game 4</option>
+                    </select>
+            </form>
         </div>
-           
-        <div id="top_center_grid" class="col">
-            <div class="position-1">
-                <input type="number" id="top_center_position1" value="">
+        <div id="top-row">
+            <div id="top_left_grid" class="col">
+                <div class="position-1">
+                    <input type="number" id="top_left_position1" value="">
+                </div>
+                <div class="position-2">
+                    <input type="number" id="top_left_position2" value="">
+                </div>
+                <div class="position-3">
+                    <input type="number" id="top_left_position3" value="">
+                </div>
+                <div class="position-4">
+                    <input type="number" id="top_left_position4" value="">
+                </div>
+                <div class="position-5">
+                    <input type="number" id="top_left_position5" value=""> 
+                </div>
+                <div class="position-6">
+                    <input type="number" id="top_left_position6" value="">
+                </div>
+                <div class="position-7">
+                    <input type="number" id="top_left_position7" value="">
+                </div>
+                <div class="position-8">
+                    <input type="number" id="top_left_position8" value="">
+                </div>
+                <div class="position-9">
+                    <input type="number" id="top_left_position9" value="">
+                </div>
             </div>
-            <div class="position-2">
-                <input type="number" id="top_center_position2" value="">
-            </div>
-            <div class="position-3">
-                <input type="number" id="top_center_position3" value="">
-            </div>
-            <div class="position-4">
-                <input type="number"id="top_center_position4"  value="">
-            </div>
-            <div class="position-5">
-                <input type="number" id="top_center_position5" value="">
-            </div>
-            <div class="position-6">
-                <input type="number" id="top_center_position6" value="">
-            </div>
-            <div class="position-7">
-                <input type="number" id="top_center_position7" value="">
-            </div>
-            <div class="position-8">
-                <input type="number" id="top_center_position8" value="">
-            </div>
-            <div class="position-9">
-                <input type="number" id="top_center_position9" value="">
-            </div>
-        </div>
-
-        <div id="top_right_grid" class="col">
-            <div class="position-1">
-                <input type="number" id="top_right_position1" value="">
-            </div>
-            <div class="position-2">
-                <input type="number" id="top_right_position2" value="">
-            </div>
-            <div class="position-3">
-                <input type="number" id="top_right_position3" value="">
-            </div>
-            <div class="position-4">
-                <input type="number" id="top_right_position4" value="">
-            </div>
-            <div class="position-5">
-                <input type="number" id="top_right_position5" value="">
-            </div>
-            <div class="position-6">
-                <input type="number" id="top_right_position6" value="">
-            </div>
-            <div class="position-7">
-                <input type="number" id="top_right_position7" value="">
-            </div>
-            <div class="position-8">
-                <input type="number" id="top_right_position8" value="">
-            </div>
-            <div class="position-9">
-                <input type="number" id="top_right_position9" value="">
-            </div>
-        </div>
-    </div>   
-  
-   <div id="middle-row">
-        <div id="middle_left_grid" class="col">
-            <div class="position1">
-                <input type="number" id="middle_left_position1" value="">
-            </div>
-            <div class="position2">
-                <input type="number" id="middle_left_position2" value="">
-            </div>
-            <div class="position3">
-                <input type="number" id="middle_left_position3" value="">
-            </div>
-            <div class="position4">
-                <input type="number" id="middle_left_position4" value="">
-            </div>
-            <div class="position5">
-                <input type="number" id="middle_left_position5" value="">
-            </div>
-            <div class="position6">
-                <input type="number" id="middle_left_position6" value="">
-            </div>
-            <div class="position7">
-                <input type="number" id="middle_left_position7" value="">
-            </div>
-            <div class="position8">
-                <input type="number" id="middle_left_position8" value="">
-            </div>
-            <div class="position9">
-                <input type="number" id="middle_left_position9" value="">
-            </div>
-        </div>
-           
-        <div id="middle_center_grid" class="col"> 
-            <div class="position1">
-                <input type="number" id="middle_center_position1" value="">
-             </div>
-            <div class="position2">
-                <input type="number" id="middle_center_position2" value="">
-             </div>
-            <div class="position3">
-                <input type="number" id="middle_center_position3" value="">
-             </div>
-            <div class="position4">
-                <input type="number" id="middle_center_position4" value="">
-             </div>
-            <div class="position5">
-                <input type="number" id="middle_center_position5" value="">
-             </div>
-            <div class="position6">
-                <input type="number" id="middle_center_position6" value="">
-             </div>
-            <div class="position7">
-                <input type="number" id="middle_center_position7" value="">
-             </div>
-            <div class="position8">
-                <input type="number" id="middle_center_position8" value="">
-             </div>
-            <div class="position9">
-                <input type="number" id="middle_center_position9" value="">
-            </div>
-        </div> 
-
-        <div id="middle_right_grid" class="col"> 
-            <div class="position1">
-                <input type="number" id="middle_right_position1" value="">
-            </div>
-            <div class="position2">
-                <input type="number" id="middle_right_position2" value="">
-            </div>
-            <div class="position3">
-                <input type="number" id="middle_right_position3" value="">
-            </div>
-            <div class="position4">
-                <input type="number" id="middle_right_position4" value="">
-            </div>
-            <div class="position5">
-                <input type="number" id="middle_right_position5" value="">
-            </div>
-            <div class="position6">
-                <input type="number" id="middle_right_position6" value="">
-            </div>
-            <div class="position7">
-                <input type="number" id="middle_right_position7" value="">
-            </div>
-            <div class="position8">
-                <input type="number" id="middle_right_position8" value="">
-            </div>
-            <div class="position9">
-                <input type="number" id="middle_right_position9" value="">
-            </div>
-        </div>
-   </div>    
-
-    <div id="bottom-row">
-        <div id="bottom_left_grid" class="col"> 
-            <div class="position1">
-                <input type="number" id="bottom_left_position1" value="">
-            </div>
-            <div class="position2">
-                <input type="number" id="bottom_left_position2" value="">
-            </div>      
-            <div class="position3">
-                <input type="number" id="bottom_left_position3" value="">
-            </div>        
-            <div class="position4">
-                <input type="number" id="bottom_left_position4" value="">
-            </div>       
-            <div class="position5">
-                <input type="number" id="bottom_left_position5" value="">
-            </div>       
-            <div class="position6">
-                <input type="number" id="bottom_left_position6" value="">
-            </div>        
-            <div class="position7">
-                <input type="number" id="bottom_left_position7" value="">
-            </div>       
-            <div class="position8">
-                <input type="number" id="bottom_left_position8" value="">
-            </div>       
-            <div class="position9">
-                <input type="number" id="bottom_left_position9" value="">
-            </div>
-        </div>
-           
-        <div id="bottom_center_grid" class="col"> 
-            <div class="position1">
-                <input type="number" id="bottom_center_position1" value="">
-            </div>
-            <div class="position2">
-                <input type="number" id="bottom_center_position2" value="">
-            </div>
-            <div class="position3">
-                <input type="number" id="bottom_center_position3" value="">
-            </div>
-            <div class="position4">
-                <input type="number" id="bottom_center_position4" value="">
-            </div>
-            <div class="position5">
-                <input type="number" id="bottom_center_position5" value="">
-            </div>
-            <div class="position6">
-                <input type="number" id="bottom_center_position6" value="">
-            </div>
-            <div class="position7">
-                <input type="number" id="bottom_center_position7" value="">
-            </div>
-            <div class="position8">
-                <input type="number" id="bottom_center_position8" value="">
-            </div>
-            <div class="position9">
-                <input type="number" id="bottom_center_position9" value="">
-            </div>
-
-        </div> 
-
-        <div id="bottom_right_grid" class="col"> 
-            <div class="position1">
-                <input type="number" id="bottom_right_position1" value="">
-            </div>
-            <div class="position2">
-                <input type="number" id="bottom_right_position2" value="">
-            </div>
-            <div class="position3">
-                <input type="number" id="bottom_right_position3" value="">
-            </div>
-            <div class="position4">
-                <input type="number" id="bottom_right_position4" value="">
-            </div>
-            <div class="position5">
-                <input type="number" id="bottom_right_position5" value="">
-            </div>
-            <div class="position6">
-                <input type="number" id="bottom_right_position6" value="">
-            </div>
-            <div class="position7">
-                <input type="number" id="bottom_right_position7" value="">
-            </div>
-            <div class="position8">
-                <input type="number" id="bottom_right_position8" value="">
-            </div>
-            <div class="position9">
-                <input type="number" id="bottom_right_position9" value="">
-            </div>
-
-        </div>
-    </div>
-
-    <br>
-
-    <p>Select an empty space on the Suduko board then select the button that</p>
-    <p>corresponds with the number. This will enter the number into the vacant</p>
-    <p>selected space. Spaces that aleeady contain a number cannot be changed.</p>
-
-    <br>
-
-    <div class="bottom-buttons">
-        <button class="buttons" id="button1" value="1" onclick="button1_Function()">1</button>
-        <button class="buttons" id="button2" value="2" onclick="button2_Function()">2</button>
-        <button class="buttons" id="button3" value="3" onclick="button3_Function()">3</button>
-        <button class="buttons" id="button4" value="4" onclick="button4_Function()">4</button>
-        <button class="buttons" id="button5" value="5" onclick="button5_Function()">5</button>
-        <button class="buttons" id="button6" value="6" onclick="button6_Function()">6</button>
-        <button class="buttons" id="button7" value="7" onclick="button7_Function()">7</button>
-        <button class="buttons" id="button8" value="8" onclick="button8_Function()">8</button>
-        <button class="buttons" id="button9" value="9" onclick="button9_Function()">9</button>
-    </div>
             
-   <br>
-   <br>
-   <br>
+            <div id="top_center_grid" class="col">
+                <div class="position-1">
+                    <input type="number" id="top_center_position1" value="">
+                </div>
+                <div class="position-2">
+                    <input type="number" id="top_center_position2" value="">
+                </div>
+                <div class="position-3">
+                    <input type="number" id="top_center_position3" value="">
+                </div>
+                <div class="position-4">
+                    <input type="number"id="top_center_position4"  value="">
+                </div>
+                <div class="position-5">
+                    <input type="number" id="top_center_position5" value="">
+                </div>
+                <div class="position-6">
+                    <input type="number" id="top_center_position6" value="">
+                </div>
+                <div class="position-7">
+                    <input type="number" id="top_center_position7" value="">
+                </div>
+                <div class="position-8">
+                    <input type="number" id="top_center_position8" value="">
+                </div>
+                <div class="position-9">
+                    <input type="number" id="top_center_position9" value="">
+                </div>
+            </div>
 
-</div>
+            <div id="top_right_grid" class="col">
+                <div class="position-1">
+                    <input type="number" id="top_right_position1" value="">
+                </div>
+                <div class="position-2">
+                    <input type="number" id="top_right_position2" value="">
+                </div>
+                <div class="position-3">
+                    <input type="number" id="top_right_position3" value="">
+                </div>
+                <div class="position-4">
+                    <input type="number" id="top_right_position4" value="">
+                </div>
+                <div class="position-5">
+                    <input type="number" id="top_right_position5" value="">
+                </div>
+                <div class="position-6">
+                    <input type="number" id="top_right_position6" value="">
+                </div>
+                <div class="position-7">
+                    <input type="number" id="top_right_position7" value="">
+                </div>
+                <div class="position-8">
+                    <input type="number" id="top_right_position8" value="">
+                </div>
+                <div class="position-9">
+                    <input type="number" id="top_right_position9" value="">
+                </div>
+            </div>
+        </div>   
+    
+        <div id="middle-row">
+            <div id="middle_left_grid" class="col">
+                <div class="position1">
+                    <input type="number" id="middle_left_position1" value="">
+                </div>
+                <div class="position2">
+                    <input type="number" id="middle_left_position2" value="">
+                </div>
+                <div class="position3">
+                    <input type="number" id="middle_left_position3" value="">
+                </div>
+                <div class="position4">
+                    <input type="number" id="middle_left_position4" value="">
+                </div>
+                <div class="position5">
+                    <input type="number" id="middle_left_position5" value="">
+                </div>
+                <div class="position6">
+                    <input type="number" id="middle_left_position6" value="">
+                </div>
+                <div class="position7">
+                    <input type="number" id="middle_left_position7" value="">
+                </div>
+                <div class="position8">
+                    <input type="number" id="middle_left_position8" value="">
+                </div>
+                <div class="position9">
+                    <input type="number" id="middle_left_position9" value="">
+                </div>
+            </div>
+            
+            <div id="middle_center_grid" class="col"> 
+                <div class="position1">
+                    <input type="number" id="middle_center_position1" value="">
+                </div>
+                <div class="position2">
+                    <input type="number" id="middle_center_position2" value="">
+                </div>
+                <div class="position3">
+                    <input type="number" id="middle_center_position3" value="">
+                </div>
+                <div class="position4">
+                    <input type="number" id="middle_center_position4" value="">
+                </div>
+                <div class="position5">
+                    <input type="number" id="middle_center_position5" value="">
+                </div>
+                <div class="position6">
+                    <input type="number" id="middle_center_position6" value="">
+                </div>
+                <div class="position7">
+                    <input type="number" id="middle_center_position7" value="">
+                </div>
+                <div class="position8">
+                    <input type="number" id="middle_center_position8" value="">
+                </div>
+                <div class="position9">
+                    <input type="number" id="middle_center_position9" value="">
+                </div>
+            </div> 
+
+            <div id="middle_right_grid" class="col"> 
+                <div class="position1">
+                    <input type="number" id="middle_right_position1" value="">
+                </div>
+                <div class="position2">
+                    <input type="number" id="middle_right_position2" value="">
+                </div>
+                <div class="position3">
+                    <input type="number" id="middle_right_position3" value="">
+                </div>
+                <div class="position4">
+                    <input type="number" id="middle_right_position4" value="">
+                </div>
+                <div class="position5">
+                    <input type="number" id="middle_right_position5" value="">
+                </div>
+                <div class="position6">
+                    <input type="number" id="middle_right_position6" value="">
+                </div>
+                <div class="position7">
+                    <input type="number" id="middle_right_position7" value="">
+                </div>
+                <div class="position8">
+                    <input type="number" id="middle_right_position8" value="">
+                </div>
+                <div class="position9">
+                    <input type="number" id="middle_right_position9" value="">
+                </div>
+            </div>
+        </div>    
+
+        <div id="bottom-row">
+            <div id="bottom_left_grid" class="col"> 
+                <div class="position1">
+                    <input type="number" id="bottom_left_position1" value="">
+                </div>
+                <div class="position2">
+                    <input type="number" id="bottom_left_position2" value="">
+                </div>      
+                <div class="position3">
+                    <input type="number" id="bottom_left_position3" value="">
+                </div>        
+                <div class="position4">
+                    <input type="number" id="bottom_left_position4" value="">
+                </div>       
+                <div class="position5">
+                    <input type="number" id="bottom_left_position5" value="">
+                </div>       
+                <div class="position6">
+                    <input type="number" id="bottom_left_position6" value="">
+                </div>        
+                <div class="position7">
+                    <input type="number" id="bottom_left_position7" value="">
+                </div>       
+                <div class="position8">
+                    <input type="number" id="bottom_left_position8" value="">
+                </div>       
+                <div class="position9">
+                    <input type="number" id="bottom_left_position9" value="">
+                </div>
+            </div>
+            
+            <div id="bottom_center_grid" class="col"> 
+                <div class="position1">
+                    <input type="number" id="bottom_center_position1" value="">
+                </div>
+                <div class="position2">
+                    <input type="number" id="bottom_center_position2" value="">
+                </div>
+                <div class="position3">
+                    <input type="number" id="bottom_center_position3" value="">
+                </div>
+                <div class="position4">
+                    <input type="number" id="bottom_center_position4" value="">
+                </div>
+                <div class="position5">
+                    <input type="number" id="bottom_center_position5" value="">
+                </div>
+                <div class="position6">
+                    <input type="number" id="bottom_center_position6" value="">
+                </div>
+                <div class="position7">
+                    <input type="number" id="bottom_center_position7" value="">
+                </div>
+                <div class="position8">
+                    <input type="number" id="bottom_center_position8" value="">
+                </div>
+                <div class="position9">
+                    <input type="number" id="bottom_center_position9" value="">
+                </div>
+
+            </div> 
+
+            <div id="bottom_right_grid" class="col"> 
+                <div class="position1">
+                    <input type="number" id="bottom_right_position1" value="">
+                </div>
+                <div class="position2">
+                    <input type="number" id="bottom_right_position2" value="">
+                </div>
+                <div class="position3">
+                    <input type="number" id="bottom_right_position3" value="">
+                </div>
+                <div class="position4">
+                    <input type="number" id="bottom_right_position4" value="">
+                </div>
+                <div class="position5">
+                    <input type="number" id="bottom_right_position5" value="">
+                </div>
+                <div class="position6">
+                    <input type="number" id="bottom_right_position6" value="">
+                </div>
+                <div class="position7">
+                    <input type="number" id="bottom_right_position7" value="">
+                </div>
+                <div class="position8">
+                    <input type="number" id="bottom_right_position8" value="">
+                </div>
+                <div class="position9">
+                    <input type="number" id="bottom_right_position9" value="">
+                </div>
+
+            </div>
+        </div>
+
+        <p>The object of Sudoku is to fill the 9-box squares, the 9-box rows, and the 9-box columns with the numbers from</p>
+        <p>1-9. When entering the numbers they cannot be duplicated in the boxes, rows, or columns. To begin, select an</p>
+        <p>empty space on the Suduko board. The background changes to yellow. Select a number button from below</p>
+        <p>that corresponds with the number that should fill the space. The number on the button will be entered into the</p>
+        <p>selected space. Continue filling the blank spaces for the remainder of the board. Remember, a number cannot</p>
+        <p>be duplicated in the 9-box squares, the 9-box rows or the 9-box columns. Spaces that already contain a number</p>
+        <p>cannot be changed. </p>
+
+        <br>
+
+        <div class="bottom-buttons">
+            <button class="buttons" id="button1" value="1" onclick="button1_Function()">1</button>
+            <button class="buttons" id="button2" value="2" onclick="button2_Function()">2</button>
+            <button class="buttons" id="button3" value="3" onclick="button3_Function()">3</button>
+            <button class="buttons" id="button4" value="4" onclick="button4_Function()">4</button>
+            <button class="buttons" id="button5" value="5" onclick="button5_Function()">5</button>
+            <button class="buttons" id="button6" value="6" onclick="button6_Function()">6</button>
+            <button class="buttons" id="button7" value="7" onclick="button7_Function()">7</button>
+            <button class="buttons" id="button8" value="8" onclick="button8_Function()">8</button>
+            <button class="buttons" id="button9" value="9" onclick="button9_Function()">9</button>
+        </div>
+                
+        <br>
+        <br>
+
+    </div>
 
 </body>
 
