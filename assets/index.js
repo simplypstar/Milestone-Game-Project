@@ -75,7 +75,6 @@ function startGame() {
 // Process the game chosen by its index number from the dropdown list
 // Call the fillBoard function to display the selected game board
     var gameNumb = document.getElementById("selectGame").selectedIndex;
-    //alert(gameNumb);
 
     switch (gameNumb) {
         case 0:
@@ -83,25 +82,53 @@ function startGame() {
             break;
         case 1:  
             fillBoard(board_1_Array);
-            //alert("now make RO");
             getInputFields();
             break;
         case 2:  
             fillBoard(board_2_Array);
+            getInputFields();
             break;
         case 3:  
             fillBoard(board_3_Array);
+            getInputFields();
             break;
         case 4:  
             fillBoard(board_4_Array);
+            getInputFields();
             break;
         default:
             break;
     }
 }
 
+ // This function displays an image of the selected Suduko Board when completed
+function viewGameBoard() {
+        var gameNumb = document.getElementById("selectGame").selectedIndex;
+
+        alert(gameNumb);
+
+        switch (gameNumb) {
+            case 0:
+                // Nothing to display
+                break;
+            case 1:  
+                window.open("./assets/completed_Suduko_Game1.jpeg", "Sudoku Game 1", "width=400, height=400"); 
+            case 2:  
+                 window.open("./assets/completed_Suduko_Game2.jpeg", "Sudoku Game 1", "width=400, height=400"); 
+                break;
+            case 3:  
+                
+                break;
+            case 4:  
+                
+                break;
+            default:
+                break;
+        }
+    }
 
 // This function fill the Suduko board with the numbers needed at the start of the game
+// The numbers are obtained from arrays defined for a specific game
 function fillBoard(arry) { 
 
     document.getElementById("top_left_position1").value = arry[1];
@@ -190,6 +217,16 @@ function fillBoard(arry) {
 // This function will traverse a filled form and disable input fields that contain a number
 // This prevents players from changing these fields. They should only change blank fields.
 function getInputFields() {
+
+    markDisabled(document.getElementById("top_left_position1").value, "top_left_position1");
+    markDisabled(document.getElementById("top_left_position2").value , "top_left_position2");
+    markDisabled(document.getElementById("top_left_position3").value , "top_left_position3");
+    markDisabled(document.getElementById("top_left_position4").value , "top_left_position4");
+    markDisabled(document.getElementById("top_left_position5").value , "top_left_position5");
+    markDisabled(document.getElementById("top_left_position6").value , "top_left_position6");
+    markDisabled(document.getElementById("top_left_position7").value , "top_left_position7");
+    markDisabled(document.getElementById("top_left_position8").value , "top_left_position8");
+    markDisabled(document.getElementById("top_left_position9").value , "top_left_position9");
     markDisabled(document.getElementById("top_center_position1").value, "top_center_position1");
     markDisabled(document.getElementById("top_center_position2").value , "top_center_position2");
     markDisabled(document.getElementById("top_center_position3").value , "top_center_position3");
@@ -262,6 +299,7 @@ function getInputFields() {
     markDisabled(document.getElementById("bottom_right_position7").value , "bottom_right_position7");
     markDisabled(document.getElementById("bottom_right_position8").value , "bottom_right_position8");
     markDisabled(document.getElementById("bottom_right_position9").value , "bottom_right_position9");
+
 }
 
 // This function is called after a board is initially filled to disable input fields that contain a number 

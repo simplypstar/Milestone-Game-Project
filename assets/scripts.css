@@ -1,4 +1,4 @@
-/*   */
+/* Cascading Style Sheet   */
 
 h1 {
     font-family: "Rokkitt", "Times New Roman", Times, serif;
@@ -21,6 +21,7 @@ h2 {
     margin: 20px 30px 20px 30px;
     background-color:rgb(230, 92, 230);
     min-width: 1080px;
+    min-height: 750px;
     max-height: 1920px;
     align-content: center;
 }
@@ -40,10 +41,10 @@ h2 {
     font-family: "Rokkitt", "Times New Roman", Times, serif;
     font-size: 14px;
     font-weight: bolder;
-
 }
 
-
+/* Configure the Grid layout for the Suduko board */
+/* The board is comprised of 9 columns, 9 rows, and 81 small boxes */
 #top-row, #middle-row, #bottom-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -61,7 +62,6 @@ h2 {
     border: 1px solid rgba(1, 1, 1);
     box-sizing: border-box;
     width: 100%;
-
   }
 
 /*Add grid lines inside each grid box */  
@@ -111,7 +111,6 @@ p {
     font-size: 12px;
     line-height: 1px;
     margin-left: 215px;
-    /* margin-bottom: 30px; */
     font-weight: bold;
 
 }
@@ -131,7 +130,7 @@ p {
     margin-left: 80px;
 } 
 
-/* The StartButton runs the StsrtGame function which loads the form in the initial or start state */
+/* The StartButton button runs the StsrtGame function which loads the form in the initial or start state */
 .startButton {
     background-color: rgb(14, 67, 121);
     width: 10%;
@@ -149,13 +148,31 @@ p {
     margin-right: 50px;
 }
 
+/* The viewGameBoard button runs the StsrtGame function which loads the form in the initial or start state */
+.viewGameBoard {
+    background-color: rgb(14, 67, 121);
+    width: 10%;
+    border: 3px solid black;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bolder;
+    color: #f86170;
+    cursor: pointer;
+    border-radius: 75px;
+    box-shadow: 0 9px #818080;
+    text-decoration: none;
+    margin-left: 150px;
+}
+
+
 /* Added animation to the buttons */
-.buttons:hover, .startButton:hover  {
+.buttons:hover, .startButton:hover, .viewGameBoard:hover  {
     background-color: #3b6dec
 }
 
 /* Added color change when the mouse hovers over button */
-.buttons:active, .startButton:active {
+.buttons:active, .startButton:active, .viewGameBoard:active {
     background-color: #f86170;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
