@@ -1,6 +1,7 @@
 # Milestone-Game-Project
  Online Web-based Sudoku Game
 
+Had to replace the dash (-) in the id names with an underscore (_) to be comppatible with javascript
 
 References:
 YouTube- Work with CSS Grid Lines Using Grid Column Start and Grid Row Start by Ralph
@@ -18,12 +19,22 @@ css :
 How TO - Animate Buttons - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
 
 
+JavaScript Switch Statement
+https://www.w3schools.com/js/js_switch.asp
+
+
+JavaScript HTML Input Examples: Display all options from a dropdown list
+- https://www.w3schools.com/js/tryit.asp?filename=try_dom_select_options
+
+
 
 Rules for playing Sudoku: 
 OBJECTIVE OF SUDOKU: Fill the 9×9 grid so that each row, column, and 3×3 sub-grid contains numbers 1-9 with no repetition.
 NUMBER OF PLAYERS: 1+ player(s)
 MATERIALS: Pen or pencil, sudoku puzzle
 https://gamerules.com/rules/sudoku/
+
+
 
 
 What is Sudoku and what are the rules of this game?
