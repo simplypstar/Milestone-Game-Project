@@ -17,43 +17,52 @@ function getActivePosition() {
 //   be entered into the ActiveElement (active input field)
 function button1_Function() {
     document.getElementById(activeInput).value = document.getElementById("button1").value;
+    verifyNumberEntered();
 }
 
 function button2_Function() {
     document.getElementById(activeInput).value = document.getElementById("button2").value;
+    verifyNumberEntered();
 }
 
 function button3_Function() {
     document.getElementById(activeInput).value = document.getElementById("button3").value;
+    verifyNumberEntered();
 }
 
 function button4_Function() {
     document.getElementById(activeInput).value = document.getElementById("button4").value;
+    verifyNumberEntered();
 }
 
 function button5_Function() {
     document.getElementById(activeInput).value = document.getElementById("button5").value;
+    verifyNumberEntered(); 
 }
 
 function button6_Function() {
     document.getElementById(activeInput).value = document.getElementById("button6").value;
+    verifyNumberEntered();
 }
 
 function button7_Function() {
     document.getElementById(activeInput).value = document.getElementById("button7").value;
+    verifyNumberEntered();
 }
 
 function button8_Function() {
     document.getElementById(activeInput).value = document.getElementById("button8").value;
+    verifyNumberEntered();
 }
 
 function button9_Function() {
     document.getElementById(activeInput).value = document.getElementById("button9").value;
+    verifyNumberEntered();
 }
 
 
 // Since the first element in an array starts at position 0, position 0 will always be a blank spqace
-// Position 1 begind the the first space in the game grid
+// Position 1 begins the first space in the game grid for the initial game board
 const board_1_Array = ["","6","","1","","4","5","8","9","","7","","3","","2","1","","5","","8","","4","","7","","","2","3",
 "4","","3","","7","","2","","6","","1","9","6","4","","","","","7","","8","","1","2","","","","","6","9","","","","7",
 "","","","","2","","","","9","","4","","8","7","2","","6","5","3",""];
@@ -69,6 +78,27 @@ const board_3_Array = ["","4","2","","","1","9","7","","8","","","8","","7","","
 const board_4_Array = ["","9","","3","6","8","","2","5","","","2","7","","","","","8","3","6","5","","4","","2","9","1","","",
 "9","1","","","","3","","","","","","","4","","","","","","","","5","","1","2","9","6","","7","9","","6","2","","",
 "","","3","2","","","8","","6","","8","","5","","7","","","2","9"];
+
+
+//These arrays represent the number positions for the completed boards
+const completed_board_1_Array = ["","6","2","1","3","4","5","8","9","7","7","9","3","8","2","1","4","5","6","8","5","4","6","7","9","1","2","3",
+"4","5","3","9","7","8","2","1","6","2","1","9","6","4","5","3","7","8","7","6","8","3","1","2","9","4","5","1","6","9","5","3","4","7",
+"8","2","5","3","2","1","8","7","9","6","4","4","8","7","2","9","6","5","3","1"];
+
+const completed_board_2_Array = ["","5","","9","","4","8","7","6","","","8","1","2","","3","9","","","","6","2","5","","7","1","","","9",
+"1","","","7","3","2","","4","8","","4","5","","2","","","","2","7","","9","","","","","8","","8","","6","","","","2",
+"","","5","","4","","7","","","","7","2","","8","","1","","5","4"];
+
+const completed_board_3_Array = ["","4","2","","","1","9","7","","8","","","8","","7","","","","","","7","","8","","4","3","","","",
+"3","","9","","","2","7","","1","","7","2","","5","","","","","","9","7","","","1","","8","","4","","","","5","","9",
+"","","","","7","","","","3","","","9","2","4","","3","5","1",""];
+
+const completed_board_4_Array = ["","9","","3","6","8","","2","5","","","2","7","","","","","8","3","6","5","","4","","2","9","1","","",
+"9","1","","","","3","","","","","","","4","","","","","","","","5","","1","2","9","6","","7","9","","6","2","","",
+"","","3","2","","","8","","6","","8","","5","","7","","","2","9"];
+
+
+
 
 
 function startGame() {
@@ -105,27 +135,30 @@ function startGame() {
 function viewGameBoard() {
         var gameNumb = document.getElementById("selectGame").selectedIndex;
 
-        alert(gameNumb);
-
         switch (gameNumb) {
             case 0:
                 // Nothing to display
                 break;
             case 1:  
-                window.open("./assets/completed_Suduko_Game1.jpeg", "Sudoku Game 1", "width=400, height=400"); 
+                window.open("./assets/images/completed_Suduko_Game1.jpeg", "Sudoku Game 1", "width=600, height=600");
+                break;
             case 2:  
-                 window.open("./assets/completed_Suduko_Game2.jpeg", "Sudoku Game 1", "width=400, height=400"); 
+                window.open("./assets/images/completed_Suduko_Game2.jpeg", "Sudoku Game 2", "width=600, height=600"); 
                 break;
             case 3:  
-                
+                window.open("./assets/images/completed_Suduko_Game3.jpeg", "Sudoku Game 3", "width=600, height=600");
                 break;
             case 4:  
-                
+                window.open("./assets/images/completed_Suduko_Game4.jpeg", "Sudoku Game 4", "width=600, height=600");
                 break;
             default:
                 break;
         }
     }
+
+function viewRules() {
+    window.open("./assets/Classic Sudoku Instructions2.pdf", "Sudoku Instructions");
+} 
 
 // This function fill the Suduko board with the numbers needed at the start of the game
 // The numbers are obtained from arrays defined for a specific game
@@ -312,18 +345,172 @@ function markDisabled(inputFld, inputId) {
     }
 }
 
-// function verifyNumbers() {
 
-//     switch (activeInput) {
+//This functions changes the backgroud color depending on whether the correct or incorrect number is entered
+function colorChange(matched, elementInput, origColor) {
+    if (matched == "yes") {
+        //Change the background color of the input field to green for correct entries
+        elementInput.style.backgroundColor = "green";
 
-//         document.getElementById("top_left_position1").value === 6;
-//         document.getElementById("top_left_position2").value = arry[2];
-//         document.getElementById("top_left_position3").value = arry[3];
-//         document.getElementById("top_left_position4").value = arry[4];
-//         document.getElementById("top_left_position5").value = arry[5];
-//         document.getElementById("top_left_position6").value = arry[6];
-//         document.getElementById("top_left_position7").value = arry[7];
-//         document.getElementById("top_left_position8").value = arry[8];
-//         document.getElementById("top_left_position9").value = arry[9];
-//     }
-// }
+        //Wait 3 secs then change the background color back to the original color
+        setTimeout(() => {
+            elementInput.style.backgroundColor = origColor;
+            }, 3000);
+    } else {
+         //Change the background color of the input field to red for incorrect entries
+         elementInput.style.backgroundColor = "red";
+
+         //Wait 3 secs then change the background color back to the original color
+         setTimeout(() => {
+             elementInput.style.backgroundColor = origColor;
+             }, 3000);       
+    }
+}
+
+
+// This function verifies that the correct number is entered into an input field on the board
+function verifyNumberEntered() {
+
+   // Define variables used for the verifyNumberEntered function
+    var selectedGame = document.getElementById("selectGame").selectedIndex;
+    var compArray;
+    const inpFieldvalue = document.getElementById(activeInput).value;
+    var inputElement = document.getElementById(activeInput);
+    const originalColor = inputElement.style.backgroundColor;
+    var goodMatch;
+
+    //select the completed board array so the numbers entered by the player can be verified
+    switch (selectedGame) {
+        case 0:
+            // Not selected
+            break;
+        case 1:  
+            compArray = completed_board_1_Array;
+            break;
+        case 2:  
+            compArray = completed_board_2_Array;
+            break;
+        case 3:  
+            compArray = completed_board_3_Array;
+            break;
+        case 4:  
+            compArray =  completed_board_4_Array;
+            break;
+        default:
+            break;
+    }
+
+    // Perform the verification on the active input field
+    switch (activeInput) { 
+
+        case "top_left_position1":
+            if (inpFieldvalue === compArray[1]) {
+
+                goodMatch = "yes"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            } else {
+
+                goodMatch = "no"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            }   
+            break;           
+
+        case "top_left_position2":
+
+            if (inpFieldvalue === compArray[2]) {
+ 
+                goodMatch = "yes"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            } else {
+
+                goodMatch = "no"
+                colorChange(goodMatch, inputElement, originalColor);                   
+            }             
+            break;
+            
+        case "top_left_position3":
+
+            if (inpFieldvalue === compArray[3]) {
+ 
+                goodMatch = "yes"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            } else {
+
+                goodMatch = "no"
+                colorChange(goodMatch, inputElement, originalColor);            
+            }             
+            break;
+
+        case "top_left_position4":
+
+            if (inpFieldvalue === compArray[4]) {
+    
+                goodMatch = "yes"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            } else {
+
+                goodMatch = "no"
+                colorChange(goodMatch, inputElement, originalColor);  
+            }            
+            break;
+
+        case "top_left_position6":
+                       
+            if (inpFieldvalue === compArray[6]) {
+        
+                goodMatch = "yes"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            } else {
+
+                goodMatch = "no"
+                colorChange(goodMatch, inputElement, originalColor);
+            }            
+            break;
+
+        case "top_left_position7":
+
+            if (inpFieldvalue === compArray[7]) {
+                goodMatch = "yes"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            } else {
+
+                goodMatch = "no"
+                colorChange(goodMatch, inputElement, originalColor);
+            }            
+            break;
+
+        case "top_left_position8":
+
+            if (inpFieldvalue === compArray[8]) {
+                goodMatch = "yes"
+                colorChange(goodMatch, inputElement, originalColor);
+
+            } else {
+                goodMatch = "no"
+                colorChange(goodMatch, inputElement, originalColor);
+            }
+            break;
+
+        case "top_left_position9":
+
+        if (inpFieldvalue === compArray[9]) {
+            goodMatch = "yes"
+            colorChange(goodMatch, inputElement, originalColor);
+
+        } else {
+            goodMatch = "no"
+            colorChange(goodMatch, inputElement, originalColor);
+        }             
+        break;
+
+     }
+
+}
+

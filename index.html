@@ -14,12 +14,11 @@
     <div class="pageContent">
         <br>
         <h1>Play Sudoku The Easy Way</h1>
-        <!-- <h2>Click <a>here</a> to learn how to play Sudoku</h2> -->
         <h1>Have fun!</h1>
         <button class="startButton" onclick="startGame()">Start The Game</button>
         <div class="gameSelect">
             <form>
-                Select the Sudoku game to play:  
+                Select the Sudoku game to play,<br> then click the 'Start The Game' button:  
                     <select id="selectGame">
                         <option>Games</option>
                         <option>Sudoku Game 1</option>
@@ -32,31 +31,31 @@
         <div id="top-row">
             <div id="top_left_grid" class="col">
                 <div class="position-1">
-                    <input type="number" id="top_left_position1" value="">
+                    <input type="number" id="top_left_position1" value="" min="1" max="9">
                 </div>
                 <div class="position-2">
-                    <input type="number" id="top_left_position2" value="">
+                    <input type="number" id="top_left_position2" value="" min="1" max="9">
                 </div>
                 <div class="position-3">
-                    <input type="number" id="top_left_position3" value="">
+                    <input type="number" id="top_left_position3" value="" min="1" max="9">
                 </div>
                 <div class="position-4">
-                    <input type="number" id="top_left_position4" value="">
+                    <input type="number" id="top_left_position4" value="" min="1" max="9">
                 </div>
                 <div class="position-5">
-                    <input type="number" id="top_left_position5" value=""> 
+                    <input type="number" id="top_left_position5" value="" min="1" max="9"> 
                 </div>
                 <div class="position-6">
-                    <input type="number" id="top_left_position6" value="">
+                    <input type="number" id="top_left_position6" value="" min="1" max="9">
                 </div>
                 <div class="position-7">
-                    <input type="number" id="top_left_position7" value="">
+                    <input type="number" id="top_left_position7" value="" min="1" max="9">
                 </div>
                 <div class="position-8">
-                    <input type="number" id="top_left_position8" value="">
+                    <input type="number" id="top_left_position8" value="" min="1" max="9">
                 </div>
                 <div class="position-9">
-                    <input type="number" id="top_left_position9" value="">
+                    <input type="number" id="top_left_position9" value="" min="1" max="9">
                 </div>
             </div>
             
@@ -307,14 +306,17 @@
             </div>
         </div>
 
-        <p>The object of Sudoku is to fill the 9-box squares, the 9-box rows, and the 9-box columns with the numbers from</p>
-        <p>1-9. When entering the numbers they cannot be duplicated in the boxes, rows, or columns. To begin, select an</p>
-        <p>empty space on the Suduko board. The background changes to yellow. Select a number button from below</p>
-        <p>that corresponds with the number that should fill the space. The number on the button will be entered into the</p>
-        <p>selected space. Continue filling the blank spaces for the remainder of the board. Remember, a number cannot</p>
-        <p>be duplicated in the 9-box squares, the 9-box rows or the 9-box columns. Spaces that already contain a number</p>
-        <p>have been disabled and cannot be changed since these numbers are in the correct space. You can click the View</p>
-        <p>Completed Game button below to view how the board should look when completed.</p>
+        <p>The object of Sudoku is to fill the 9-box squares, the 9-box rows, and the 9-box columns with numbers from 1 - 9.</p>
+        <p>When entering the numbers, they cannot be duplicated in the boxes, rows, or columns. To begin, select a game to</p>
+        <p>to play from the Games dropdown at the top of the board. Click the 'Start The Game' button to load the board in its</p>
+        <p>beginning state. Click on an empty space on the Suduko board. The background changes to yellow. Select a number button</p>
+        <p>from below that corresponds with the number that you think should fill the space. The number on the button will be entered</p>
+        <p>into the selected space. If you enter the correct number, the space will turn green for 3 seconds then return to its</p>
+        <p>original color. If you enter an incorrect number, the space will turn red for 3 seconds then return to its original</p>
+        <p>color. Continue filling the blank spaces for the remainder of the board. Spaces that already contain a number</p>
+        <p>have been disabled and cannot be changed since these numbers are in the correct space. You can click the 'View</p>
+        <p>Completed Game' button below to view how the board should look when completed. Click the 'View Rules & How to Play'</p>
+        <p>button for more instructions and strategies regarding how go play Suduko.</p>
 
         <br>
 
@@ -333,6 +335,8 @@
         <br>
         <br>
         <button class="viewGameBoard" onclick="viewGameBoard()">View Completed Game</button>
+        <button class="viewRules" onclick="viewRules()">View Rules & How to Play</button>
+
     </div>
 
 </body>

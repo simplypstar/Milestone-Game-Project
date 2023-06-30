@@ -29,12 +29,12 @@ h2 {
 .gameSelect {
     display: flex;
     font-family: "Rokkitt", "Times New Roman", Times, serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bolder;
     text-align: center;
     width: 350px;
     border: 5px; 
-    margin: 0 auto;
+    margin: 0 auto auto 375px;
 }
 
 .gameSelect select {
@@ -119,18 +119,18 @@ p {
 .buttons {
     display: grid;
     display: inline-block;
-    grid-template-columns: repeat(6, 1fr);   
+    grid-template-columns: repeat(6, 1fr);
     background-color: rgb(117, 168, 219);
     border: 2px solid black;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bolder;
     cursor: pointer;
-    border-radius: 30px 15px;
-    box-shadow: 0 5px #818080;
+    border-radius: 20px 5px;
+    box-shadow: 5px 0px #818080;
     margin-left: 80px;
 } 
 
-/* The StartButton button runs the StsrtGame function which loads the form in the initial or start state */
+/* The StartButton button runs the StartGame function which loads the form in the initial or start state */
 .startButton {
     background-color: rgb(14, 67, 121);
     width: 10%;
@@ -141,14 +141,14 @@ p {
     font-weight: bolder;
     color: #f86170;
     cursor: pointer;
-    border-radius: 75px;
-    box-shadow: 0 9px #818080;
+    border-radius: 5px 20px;
+    box-shadow: 2px 6px #818080;
     text-decoration: none;
     float: right;
     margin-right: 50px;
 }
 
-/* The viewGameBoard button runs the StsrtGame function which loads the form in the initial or start state */
+/* The viewGameBoard button runs the StartGame function which loads the form in the initial or start state */
 .viewGameBoard {
     background-color: rgb(14, 67, 121);
     width: 10%;
@@ -159,23 +159,39 @@ p {
     font-weight: bolder;
     color: #f86170;
     cursor: pointer;
-    border-radius: 75px;
-    box-shadow: 0 9px #818080;
+    border-radius: 5px 20px;
+    box-shadow: 4px 6px #818080;
+    text-decoration: none; 
+    margin-left: 150px;
+}
+
+/* The viewRules button opens a .pdf file that contains the rules and how to play Suduko */
+.viewRules {
+    background-color: rgb(14, 67, 121);
+    width: 10%;
+    border: 3px solid black;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bolder;
+    color: #f86170;
+    cursor: pointer;
+    border-radius: 5px 20px;
+    box-shadow: 4px 6px #818080;
     text-decoration: none;
     margin-left: 150px;
 }
 
-
 /* Added animation to the buttons */
-.buttons:hover, .startButton:hover, .viewGameBoard:hover  {
+.buttons:hover, .startButton:hover, .viewGameBoard:hover, .viewRules:hover   {
     background-color: #3b6dec
 }
 
 /* Added color change when the mouse hovers over button */
-.buttons:active, .startButton:active, .viewGameBoard:active {
+.buttons:active, .startButton:active, .viewGameBoard:active .viewRules:active {
     background-color: #f86170;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    box-shadow: 10px 5px 5px red; /*#666;*/
+    transform: translateY(2px);
 }
 
 
