@@ -2,16 +2,26 @@
  Online Web-based Sudoku Game
 
 Had to replace the dash (-) in the id names with an underscore (_) to be comppatible with javascript
-Configure the grids to have internls borders
+Configure the grids to have internals borders
 Configured the grids to have alternating background colors
+Configured the input fields background to change to yellow when selected; thanks to Christopher Marlowe
+  for showing me that the field color had to be set to transparent before this would work
+Configured input fields to change green for a correct entry and red for an incorrect entry
+Added a function to enable blank field so they would be ready for input
+Added a function to disable fields containing a number on a new game board
+Added a function the verifies the player selected the correct number for a field
 
 References:
+
+W3W Schools (https://www.w3schools.com) was used for most of the assistance I needed
+
 YouTube- Work with CSS Grid Lines Using Grid Column Start and Grid Row Start by Ralph
 Function to identify the active elementt found on:  https://www.w3schools.com/jsref/prop_document_activeelement.asp
 
-Rules and how to play Suduko from GoldStar games - https://www.goldstarpuzzles.com/solutions
+Rules and how to play Suduko .pdf obtained from GoldStar games - https://www.goldstarpuzzles.com/solutions
+Free applause .mp3 downloaded from https://www.freesoundeffects.com/free-sounds/applause-10033/  
 
-css : 
+css references: 
  - add internal boarers to each grid box - https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/
 
  Grid-Gap property - https://www.w3schools.com/cssref/tryit.php?filename=trycss_grid-gap
@@ -31,32 +41,6 @@ JavaScript HTML Input Examples: Display all options from a dropdown list
 - https://www.w3schools.com/js/tryit.asp?filename=try_dom_select_options
 
 
-************
-Rules for playing Sudoku: 
-OBJECTIVE OF SUDOKU: Fill the 9×9 grid so that each row, column, and 3×3 sub-grid contains numbers 1-9 with no repetition.
-NUMBER OF PLAYERS: 1+ player(s)
-MATERIALS: Pen or pencil, sudoku puzzle
-https://gamerules.com/rules/sudoku/
-
-*********
-What is Sudoku and what are the rules of this game?
-- Sudoku is a popular logic puzzle with numbers. Its rules are quite simple, so even beginners can
-   handle the simple levels.
-What are the basic rules of Sudoku?
--   Sudoku grid consists of 9x9 spaces.
--   You can use only numbers from 1 to 9.
--   Each 3×3 block can only contain numbers from 1 to 9.
--   Each vertical column can only contain numbers from 1 to 9.
--   Each horizontal row can only contain numbers from 1 to 9.
--   Each number in the 3×3 block, vertical column or horizontal row can be used only once.
--   The game is over when the whole Sudoku grid is correctly filled with numbers.
--   There are already many numbers filled in on the grid in the simple Sudoku puzzles. 
-- Therefore it’s not so difficult to cope with the solution if you are familiar with the
-    basic rules. However, in order to solve difficult levels and deal with them quickly, you need to use some tricks and learn advanced Sudoku techniques.
-
-- Our Sudoku guide has a lot of tutorial videos for players of all skill levels: from Sudoku
- absolute beginners to experts. Watch the videos to check out all the rules, tips and strategies of Sudoku and enjoy the game!
-https://sudoku.com/sudoku-rules/
 
 
 

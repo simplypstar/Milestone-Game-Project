@@ -4,12 +4,12 @@
 var activeInput = "";   // Current Active Element
 var disabledInputs = 0;  // Number of disabled Input fields
 var enabledInputs = 0;   // Number of enabled Input fields
-// Click on an input field to get its Element Id; this input field becomes the ActiveElement (selected element)
-// This elements id name is saved to the activeInput global variable
-// This global variable will be used with each of the buttlon functions
+
+// Click on an input field to get its Element Id; this input field becomes the Active Element (selected element)
+// This element's id name is saved to the activeInput global variable
+// This global variable will be used with several functions
 function getActivePosition() {
     activeInput = document.activeElement.id;
-    //alert(activeInput);
 }
 
 
@@ -81,7 +81,8 @@ const board_4_Array = ["","9","","3","6","8","","2","5","","","2","7","","","","
 "","","3","2","","","8","","6","","8","","5","","7","","","2","9"];
 
 
-//These arrays represent the number positions for the completed boards
+// hese arrays represent the number positions for the completed boards. This array is used to verify to verify
+// a the numbers entered by the player.
 const completed_board_1_Array = ["","6","2","1","3","4","5","8","9","7","7","9","3","8","2","1","4","5","6","8","5","4","6","7","9","1","2","3",
 "4","5","3","9","7","8","2","1","6","2","1","9","6","4","5","3","7","8","7","6","8","3","1","2","9","4","5","1","6","9","5","3","4","7",
 "8","2","5","3","2","1","8","7","9","6","4","4","8","7","2","9","6","5","3","1"];
@@ -111,22 +112,22 @@ function startGame() {
         case 1:  
             fillBoard(board_1_Array);
             disableInputFields();
-            enableInputFields()
+            enableInputFields();
             break;
         case 2:  
             fillBoard(board_2_Array);
             disableInputFields();
-            enableInputFields()
+            enableInputFields();
             break;
         case 3:  
             fillBoard(board_3_Array);
             disableInputFields();
-            enableInputFields()
+            enableInputFields();
             break;
         case 4:  
             fillBoard(board_4_Array);
             disableInputFields();
-            enableInputFields()
+            enableInputFields();
             break;
         default:
             break;
@@ -160,13 +161,12 @@ function viewGameBoard() {
 
 // This function opens a .pdf file obtained from GoldStarPuzzles.com that has tips and rules for how to play Suduko
 function viewRules() {
-    window.open("./assets/Classic Sudoku Instructions2.pdf", "Sudoku Instructions");
+    window.open("./assets/Classic Sudoku Instructions.pdf", "Sudoku Instructions");
 } 
 
 // This function fills the Suduko board with the numbers needed at the start of the game
 // The numbers are obtained from arrays defined for a specific game
 function fillBoard(arry) { 
-
     document.getElementById("top_left_position1").value = arry[1];
     document.getElementById("top_left_position2").value = arry[2];
     document.getElementById("top_left_position3").value = arry[3];
@@ -427,7 +427,6 @@ function disableInputFields() {
 // These input fields may have been disabled for a previously played game.
 function markEnabled(inputFld, inputId) {
     if(inputFld === "") {
-        enabledInputs = ++;
         document.getElementById(inputId).disabled = false;         
     }
 }
@@ -437,7 +436,8 @@ function markEnabled(inputFld, inputId) {
 function markDisabled(inputFld, inputId) {
     if(inputFld === "") {
         // Move on to the next field
-    } else {        
+    } else {  
+        disabledInputs++;      // count the number of disabled Input fields.
         document.getElementById(inputId).disabled = true;   
     }
 }
@@ -449,19 +449,30 @@ function colorChange(matched, elementInput, origColor) {
     if (matched == "yes") {
         // Change the background color of the input field to green for correct entries
         elementInput.style.backgroundColor = "green";
-
-        // Wait 3 secs then change the background color back to the original color
+        enabledInputs++;  // count the number of correct entried for the input fields
+        // Wait 2 secs then change the background color back to the original color
         setTimeout(() => {
             elementInput.style.backgroundColor = origColor;
-            }, 3000);
+            }, 2000);
+         // Play applause3.mp3 -- file downloaded from https://www.freesoundeffects.com/free-sounds/applause-10033/  
+         // Display an alert message congratulating the player
+         if (enabledInputs + disabledInputs === 81) {
+            var source = "./assets/applause3.mp3";
+            var audio = new Audio();
+            audio.src = source;
+            audio.autoplay = true;
+            audio.play();
+            alert("Congratulations!! You have succesdfully completed the game.");
+        }
+
     } else {
          // Change the background color of the input field to red for incorrect entries
          elementInput.style.backgroundColor = "red";
 
-         // Wait 3 secs then change the background color back to the original color
+         // Wait 2 secs then change the background color back to the original color
          setTimeout(() => {
              elementInput.style.backgroundColor = origColor;
-             }, 3000);
+             }, 2000);
              
         // Delete an incorrect entry
         elementInput.value = "";
@@ -501,12 +512,13 @@ function verifyNumberEntered() {
     }
 
     // Perform the verification on the active input field
-    // The activeInput parameter identidies the element Id of the active input field
+    // The activeInput parameter identifies the element Id of the active input field
     switch (activeInput) { 
             // top_left -- 1st row
         case "top_left_position1":
             if (inpFieldvalue === compArray[1]) {
                 valuesMatch = "yes"
+                enabledInputs++;  // add the number of correct entried for the input fields
                 colorChange(valuesMatch, inputElement, originalColor);
             } else {
                 valuesMatch = "no"
@@ -686,8 +698,8 @@ function verifyNumberEntered() {
         }             
         break;
 
-        // top_left -- 1st row
-        case "top_left_position1":
+        // top_right  -- 1st row
+        case "top_right_position1":
             if (inpFieldvalue === compArray[19]) {
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
@@ -697,7 +709,7 @@ function verifyNumberEntered() {
             }   
             break;           
 
-        case "top_left_position2":
+        case "top_right_position2":
             if (inpFieldvalue === compArray[20]) {
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
@@ -707,7 +719,7 @@ function verifyNumberEntered() {
             }             
             break;
             
-        case "top_left_position3":
+        case "top_right_position3":
             if (inpFieldvalue === compArray[21]) {
                     valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
@@ -717,7 +729,7 @@ function verifyNumberEntered() {
             }             
             break;
 
-        case "top_left_position4":
+        case "top_right_position4":
             if (inpFieldvalue === compArray[22]) {    
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
@@ -727,7 +739,7 @@ function verifyNumberEntered() {
             }            
             break;
     
-        case "top_left_position5":
+        case "top_right_position5":
             if (inpFieldvalue === compArray[23]) {    
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
@@ -737,7 +749,7 @@ function verifyNumberEntered() {
             }            
             break;
         
-        case "top_left_position6":                      
+        case "top_right_position6":                      
             if (inpFieldvalue === compArray[24]) {        
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
@@ -747,7 +759,7 @@ function verifyNumberEntered() {
             }            
             break;
 
-        case "top_left_position7":
+        case "top_right_position7":
             if (inpFieldvalue === compArray[25]) {
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor)
@@ -757,7 +769,7 @@ function verifyNumberEntered() {
             }            
             break;
 
-        case "top_left_position8":
+        case "top_right_position8":
             if (inpFieldvalue === compArray[26]) {
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
@@ -767,7 +779,7 @@ function verifyNumberEntered() {
             }
             break;
 
-        case "top_left_position9":
+        case "top_right_position9":
             if (inpFieldvalue === compArray[27]) {
                 valuesMatch = "yes"
                 colorChange(valuesMatch, inputElement, originalColor);
