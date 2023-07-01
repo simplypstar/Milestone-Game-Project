@@ -10,6 +10,8 @@ Configured input fields to change green for a correct entry and red for an incor
 Added a function to enable blank field so they would be ready for input
 Added a function to disable fields containing a number on a new game board
 Added a function the verifies the player selected the correct number for a field
+Added counters to check when all 81 input fields are filed; this indicated the end of the game
+Added an applause3.mp3 file that plays when the board is completed
 
 References:
 
@@ -39,6 +41,9 @@ https://www.w3schools.com/js/js_switch.asp
 
 JavaScript HTML Input Examples: Display all options from a dropdown list
 - https://www.w3schools.com/js/tryit.asp?filename=try_dom_select_options
+
+Javascript auto play .mp3 file; code obtained from Stackoverflow
+- https://stackoverflow.com/questions/38316679/autoplay-html-audio-created-with-javascript
 
 
 
